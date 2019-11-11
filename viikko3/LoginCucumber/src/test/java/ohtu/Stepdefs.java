@@ -25,7 +25,7 @@ public class Stepdefs {
         inputLines = new ArrayList<>();      
     }
     
-    @Given("^command login is selected$")
+    @Given("command login is selected$")
     public void commandLoginSelected() throws Throwable {
         inputLines.add("login");
     }
