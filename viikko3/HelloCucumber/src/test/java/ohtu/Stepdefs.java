@@ -19,6 +19,11 @@ public class Stepdefs {
         counter.increase();
     }
 
+    @When("it is reset")
+    public void itIsReset() {
+        counter.reset();
+    }
+
     @Then("the value should be {int}")
     public void theValueShouldBe(Integer val) {
         assertEquals(val.intValue(), counter.value());
