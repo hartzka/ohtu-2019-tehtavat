@@ -11,12 +11,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import java.util.*;
+import ohtu.authentication.AuthenticationService;
 
 public class Stepdefs {
     //WebDriver driver = new ChromeDriver();
     WebDriver driver = new HtmlUnitDriver();
     String baseUrl = "http://localhost:4567";
-    
+    UserDaoForTests dao = new UserDaoForTests();
+    AuthenticationService auth = new AuthenticationService(dao);
+     
     @Given("login is selected")
     public void loginIsSelected() {
         driver.get(baseUrl);
@@ -38,6 +41,7 @@ public class Stepdefs {
     
     @Then("user is logged in")
     public void userIsLoggedIn() {
+        System.out.println(driver.getPageSource());
         pageHasContent("Ohtu Application main page");
     }    
  
@@ -60,14 +64,23 @@ public class Stepdefs {
 
     @When("incorrect username {string} and password {string} and matching password confirmation are entered")
     public void incorrectUsernameAndPasswordAndMatchingPasswordConfirmationAreEntered(String username, String password) {
-        // Write code here that turns the phrase above into concrete actions
         signUpWith(username, password, password);
     }
 
     @When("a valid username {string} and password {string} and unmatching password confirmation are entered")
     public void aValidUsernameAndPasswordAndUnmatchingPasswordConfirmationAreEntered(String username, String password) {
-        // Write code here that turns the phrase above into concrete actions
-        signUpWith(username, password, password+"a");
+        signUpWith(username, password, password+" ");
+    }
+
+    @When("user with username {string} with password {string} is successfully created")
+    public void userWithUsernameAndPasswordIsSuccessfullyCreated(String username, String password) throws Throwable{
+        commandNewSelected();
+        signUpWith(username, password, password);
+    }
+
+    @When("user with username {string} and password {string} is tried to be created")
+    public void userWithUsernameAndPasswordIsTriedToBeCreated(String username, String password) {
+        auth.createUser(username, password, password);
     }
 
     
