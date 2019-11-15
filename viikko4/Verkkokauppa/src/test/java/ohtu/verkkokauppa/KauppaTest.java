@@ -67,5 +67,50 @@ public class KauppaTest {
         k.tilimaksu("pekka", "12345");
         verify(pankki).tilisiirto(eq("pekka"), eq(42), eq("12345"), eq("33333-44455"), eq(5));   
     }
+
+    @Test
+    public void aloitaAsiointiNollaaOstoskorinHinnan() {
+        k.lisaaKoriin(1);     // ostetaan tuotetta numero 1 eli maitoa
+        k.lisaaKoriin(2);
+        k.aloitaAsiointi();  
+        k.lisaaKoriin(2);   
+        k.tilimaksu("pekka", "12345");
+        verify(pankki).tilisiirto(eq("pekka"), eq(42), eq("12345"), eq("33333-44455"), eq(3));   
+    }
+
+    @Test
+    public void kauppaPyytaaUudenViitenumeronJokaiselleMaksutapahtumalle() {
+        when(viite.uusi()).
+                thenReturn(1).
+                thenReturn(2).
+                thenReturn(3);
+        
+        k.lisaaKoriin(1);     // ostetaan tuotetta numero 1 eli maitoa
+        k.lisaaKoriin(2);
+        k.tilimaksu("pekka", "12345");
+        verify(pankki).tilisiirto(eq("pekka"), eq(1), eq("12345"), eq("33333-44455"), eq(8));   
+        
+        k.aloitaAsiointi();  
+        k.lisaaKoriin(2);   
+        k.tilimaksu("pekka", "12345");
+        verify(pankki).tilisiirto(eq("pekka"), eq(2), eq("12345"), eq("33333-44455"), eq(3));   
+    
+        k.aloitaAsiointi();  
+        k.lisaaKoriin(1);   
+        k.lisaaKoriin(1);   
+        k.lisaaKoriin(2);   
+        k.tilimaksu("pekka", "12345");
+        verify(pankki).tilisiirto(eq("pekka"), eq(3), eq("12345"), eq("33333-44455"), eq(13));   
+    }
+
+    @Test
+    public void poistoKoristaVahentaaPoistettavanHinnanSummasta() {
+        k.lisaaKoriin(1);  
+        k.lisaaKoriin(2);
+        k.lisaaKoriin(2);  
+        k.poistaKorista(2); 
+        k.tilimaksu("pekka", "12345");
+        verify(pankki).tilisiirto(eq("pekka"), eq(42), eq("12345"), eq("33333-44455"), eq(8));   
+    }
 }
 
