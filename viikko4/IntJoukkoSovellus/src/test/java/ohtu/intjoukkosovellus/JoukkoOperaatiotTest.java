@@ -45,7 +45,7 @@ public class JoukkoOperaatiotTest {
         Arrays.sort(vastauksenLuvut);
         
         int[] odotettu = {1, 5, 6};
-        
+        System.out.println(vastauksenLuvut);
         assertArrayEquals(odotettu, vastauksenLuvut);        
     }  
 
