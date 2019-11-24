@@ -17,3 +17,4 @@
 [Viikko 4](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko4)
 
 1
+2
