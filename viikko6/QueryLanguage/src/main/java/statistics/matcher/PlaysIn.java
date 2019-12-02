@@ -3,10 +3,12 @@ package statistics.matcher;
 
 import statistics.Player;
 
-public class PlaysIn implements Matcher {
+public class PlaysIn extends Pino implements Matcher {
     private String team;
+    private Pino pino;
 
-    public PlaysIn(String team) {
+    public PlaysIn(Pino pino, String team) {
+        this.pino = pino;
         this.team = team;
     }        
     
