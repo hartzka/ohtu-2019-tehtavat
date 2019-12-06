@@ -4,13 +4,12 @@ package statistics.matcher;
 import java.lang.reflect.Method;
 import statistics.Player;
 
-public class HasFewerThan extends Pino implements Matcher {
-    private Pino pino;
+public class HasFewerThan implements Matcher {
+    private Matcher matcher;
     private int value;
     private String fieldName;
 
-    public HasFewerThan(Pino pino, int value, String category) {
-        this.pino = pino;
+    public HasFewerThan(int value, String category) {
         this.value = value;
         fieldName = "get"+Character.toUpperCase(category.charAt(0))+category.substring(1, category.length());
     }

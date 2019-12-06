@@ -4,13 +4,12 @@ package statistics.matcher;
 import java.lang.reflect.Method;
 import statistics.Player;
 
-public class HasAtLeast extends Pino implements Matcher {
-    private Pino pino;
+public class HasAtLeast implements Matcher {
+    private Matcher matcher;
     private int value;
     private String fieldName;
 
-    public HasAtLeast(Pino pino, int value, String category) {
-        this.pino = pino;
+    public HasAtLeast(int value, String category) {
         this.value = value;
         fieldName = "get"+Character.toUpperCase(category.charAt(0))+category.substring(1, category.length());
     }
