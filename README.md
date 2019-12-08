@@ -1,5 +1,7 @@
 # ohtu-2019-tehtavat
 
+Kurssin Ohjelmistotuotanto HY syksyn 2019 tehtävät 
+
 ## Muut repot
 
 [Ohtuvarasto repo](https://github.com/hartzka/ohtu-viikko1)
@@ -19,4 +21,6 @@
 [Viikko 5](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko5)
 
 [Viikko 6](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko6)
+
+[Viikko 7](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko7)
 

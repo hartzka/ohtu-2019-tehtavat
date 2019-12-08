@@ -24,11 +24,11 @@ public class Main {
         QueryBuilder query = new QueryBuilder();
 
         Matcher m = query.oneOf(
-                query.playsIn("PHI")
-                        .hasAtLeast(10, "assists")
-                        .hasFewerThan(8, "goals").build(),
-                query.playsIn("EDM")
-                        .hasAtLeast(20, "points").build()
+                
+                        query.hasAtLeast(10, "assists")
+                        .hasAtLeast(5, "goals").build(),
+                
+                    query.hasAtLeast(0, "points").build()
         ).build();
 
         for (Player player : stats.matches(m)) {
