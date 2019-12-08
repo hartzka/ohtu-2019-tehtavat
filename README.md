@@ -24,6 +24,3 @@ Kurssin Ohjelmistotuotanto HY syksyn 2019 tehtävät
 
 [Viikko 7](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko7)
 
-a
-b
-
