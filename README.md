@@ -1,26 +1,26 @@
 # ohtu-2019-tehtavat
 
-Kurssin Ohjelmistotuotanto HY syksyn 2019 tehtävät 
+Software Engineering (Ohjelmistotuotanto HY) fall 2019 exercises
 
-## Muut repot
+## Other repos
 
 [Ohtuvarasto repo](https://github.com/hartzka/ohtu-viikko1)
 
-[Viikko 2 branchit](https://github.com/hartzka/ohtu-branches)
+[Week 2 branches](https://github.com/hartzka/ohtu-branches)
 
-## Viikkotehtävät
+## Weekly exercises
 
-[Viikko 1](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko1)
+[Week 1](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko1)
 
-[Viikko 2](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko2)
+[Week 2](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko2)
 
-[Viikko 3](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko3)
+[Week 3](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko3)
 
-[Viikko 4](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko4)
+[Week 4](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko4)
 
-[Viikko 5](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko5)
+[Week 5](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko5)
 
-[Viikko 6](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko6)
+[Week 6](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko6)
 
-[Viikko 7](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko7)
+[Week 7](https://github.com/hartzka/ohtu-2019-tehtavat/tree/master/viikko7)
 
